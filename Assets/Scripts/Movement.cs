@@ -34,6 +34,14 @@ public class Movement : MonoBehaviour {
 	}
 	
 	void FixedUpdate() {
+        if (grounded)
+        {
+            rb.drag = 10.0f;
+        } else
+        {
+            rb.drag = 1.0f;
+        }
+
 		float h = Input.GetAxis("Horizontal");
 		if (h * rb.velocity.x < maxSpeed) {
 			rb.AddForce(Vector2.right * h * moveForce);

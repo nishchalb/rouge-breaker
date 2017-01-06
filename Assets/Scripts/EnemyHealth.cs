@@ -12,7 +12,7 @@ public class EnemyHealth : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		GetComponent<SpriteRenderer>().color = new Color(0.0f, HP/100.0f, 0.0f);
-		Debug.LogError("hp is " + HP);
+		//Debug.LogError("hp is " + HP);
 	}
 	
 	void OnCollisionEnter2D(Collision2D collision) {
